@@ -1,0 +1,33 @@
+
+<div class="sign-wrapper">
+
+    <form #basicForm="ngForm" ngNativeValidate  (ngSubmit)="sendData(basicForm)" class="sign_wrapper-block">
+        <div *ngIf="isError">{{ error }}</div>
+
+        <div class="sign-in-title">Sign in</div>
+        <label for=""> 
+            <div>Email</div>
+            <input type="text"
+            placeholder="Email"
+            name="email" 
+            ngModel required email
+            type="email"
+            >
+
+        </label>
+
+        <label for=""> 
+            <div>Password</div>
+            <input
+            pattern="[a-zA-Z][a-zA-Z0-9]{5,20}"
+            placeholder="Password"
+            ngModel required
+                name="password"
+                type="text">
+            
+        </label>
+
+        <button class="sign-in_btn">Sign in</button>
+
+    </form>
+</div>

@@ -1,0 +1,47 @@
+<app-wrapper>
+  <h2>Games</h2>
+<app-input (onChanged)="findGames($event)"></app-input>
+<div class="app-sub-wrapper">
+  <div class="app-sub-wrapper-left">
+      <div *ngIf="searchGamesArray.length">
+        <app-my-game-card [dataGameItem]="game" *ngFor="let game of searchGamesArray" > 
+          <app-add-to-library-buttons [dataGameItem]="game"> </app-add-to-library-buttons>
+        </app-my-game-card>
+      </div>
+
+      <div *ngIf="!searchGamesArray.length">
+        <app-zero-items></app-zero-items>
+      </div>
+  </div>
+
+  <div class="app-sub-wrapper-right">
+    <div class="filter-title">Filter by price</div>
+    <input type="range" min="100" max="500" 
+    (input)="rangeWatch(ranger.value); filterChange()"
+    #ranger
+    step="50"
+    >
+
+    <div>{{rangeValue}}</div>
+    <label for="">
+      <input type="checkbox" name="price" id=""
+      [(ngModel)]="priceDisable"
+      (ngModelChange)="filterChange()"
+     
+      >
+      <div>Without price</div>
+    </label>
+    <p class="filter-title">Filter by tag</p>
+    <p *ngFor="let cat of categories">
+      <label for="">
+        <input type="checkbox" name="Indie" id=""
+        [(ngModel)]="cat.checked"
+        (ngModelChange)="filterChange()"
+        >
+        <div>{{cat.cat}}</div>
+      </label>
+    </p>
+  </div>
+</div>
+</app-wrapper>
+

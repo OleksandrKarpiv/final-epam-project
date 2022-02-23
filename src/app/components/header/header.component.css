@@ -1,0 +1,121 @@
+header {
+    position: fixed;
+    top: 0;
+    background-color: #FFFFFF;
+    height: 56px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.nav-wrapper {
+    display: flex;
+}
+
+a {
+    margin: 0 10px 0 10px;
+    text-decoration: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+}
+
+.is-active {
+    color: #6C69FF;
+}
+
+.left-side-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.btn-logout {
+    width: 100px;
+    height: 40px;
+    color: white;
+    background:  #6C69FF;
+    border-radius: 10px;
+}
+
+.menu-btn{
+    display: flex;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1;
+  }
+   
+  .menu-btn > span,
+  .menu-btn > span::before,
+  .menu-btn > span::after {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #616161;
+    transition-duration: .25s;
+  }
+  .menu-btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu-btn > span::after {
+    content: '';
+    top: 8px;
+  }
+
+  .menubox {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    background-color: #FFFFFF;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+   }
+
+  .menubox > li {
+      text-decoration: none;
+      list-style: none;
+      padding: 10px;
+      text-align: right;
+  }
+
+  .burger {
+     display: none;
+  }
+
+  .btn-logout-mobile {
+    width: 100px;
+    height: 40px;
+    color: white;
+    background:  #6C69FF;
+    border-radius: 10px;
+  }
+
+@media(max-width: 540px) {
+    .btn-logout {
+        display: none;
+    }
+
+    .nav-wrapper {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .menubox li.btn-logout {
+        display: block;
+    }
+}

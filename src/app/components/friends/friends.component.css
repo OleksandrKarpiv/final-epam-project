@@ -1,0 +1,17 @@
+.friend_btn-search {
+    width: 75px;
+    height: 32px;
+    background: #6C69FF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    color: white;
+    margin: 3px;
+}
+
+.input_friends {
+    width: 997px;
+    height: 32px;
+    border: 0.5px solid #000000;
+    box-sizing: border-box;
+    border-radius: 4px;
+}

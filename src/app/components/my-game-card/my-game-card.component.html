@@ -1,0 +1,17 @@
+<div class="my-game-card-wrapper">
+  <div class="my-game-card-header">
+    <h5 class="my-game-description-text my-game-title my-game-description">{{dataGameItem.name}}</h5>
+
+    <div class="my-game-price-text my-game-price">{{dataGameItem.price}} UAH</div>
+
+  </div>
+  <div class="my-game-card-footer">
+      <p class="my-game-description-text my-game-description">{{dataGameItem.description}} </p>
+      <div class="buttons">
+        <ng-content></ng-content>
+      </div>
+  </div>
+</div>
+
+
+

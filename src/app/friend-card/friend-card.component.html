@@ -1,0 +1,6 @@
+<div class="friend-card-wrapper">
+    <div>{{userData.name}}</div>
+    <button class="friend-btn" 
+    [ngStyle]="{'background': userData.friend == true ? 'red' : '#6C69FF' }"
+    (click)="toggleFriend()">{{userData.friend ? "Remove" : "Add"}}</button>
+</div>

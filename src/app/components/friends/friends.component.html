@@ -1,0 +1,12 @@
+<app-wrapper>
+    <app-input (onChanged)="findFriends($event)" ></app-input>
+    <div class="list_friends-wrapper">
+      <div *ngIf="searchFriendsArray.length">
+        <app-friend-card *ngFor="let item of searchFriendsArray" [userData]="item"></app-friend-card>
+      </div>
+
+      <div *ngIf="!searchFriendsArray.length">
+        <app-zero-items></app-zero-items>
+      </div>
+    </div>
+</app-wrapper>

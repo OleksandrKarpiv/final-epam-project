@@ -1,0 +1,44 @@
+
+
+<div class="profile-wrapper">
+
+    <form #basicProfForm="ngForm" ngNativeValidate  (ngSubmit)="sendData(basicProfForm)" class="profile_wrapper-block">
+        <div class="profile-in-title">Profile</div>
+        <label for=""> 
+            <div>Username</div>
+            <input type="text"
+            placeholder="Username"
+            ngModel required
+            name="username"
+            [(ngModel)]="username"
+            >
+
+        </label>
+
+        <label for=""> 
+            <div>Email</div>
+            <input type="text"
+            placeholder="Email"
+            name="email"
+            disabled
+            [(ngModel)]="email"
+            >
+
+        </label>
+
+        <label for=""> 
+            <div>Age</div>
+            <input
+            placeholder="Age"
+            type="text"
+            ngModel required
+            name="age"
+            [(ngModel)]="age"
+
+            >
+        </label>
+
+        <button type="submit" class="profile-in_btn">Save</button>
+
+    </form>
+</div>

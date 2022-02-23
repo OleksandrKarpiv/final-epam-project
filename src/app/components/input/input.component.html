@@ -1,0 +1,10 @@
+<form>
+  <div class="form-container">
+    <input class="input_form" [(ngModel)]="search" name="find" placeholder="Search item" type="text">
+    <button (click)="change()" 
+    type="submit"
+    (keyup.enter)="change()"
+    class="find_btn-search">Search
+    </button>
+  </div>
+</form>

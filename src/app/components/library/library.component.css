@@ -1,0 +1,15 @@
+.library-header{
+  height: 10%;
+}
+h2{
+  margin: 0;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+
+.test{
+  overflow: auto;
+  width: 100%;
+  height: 90%;
+}
